@@ -29,7 +29,6 @@
       min-height: 100vh;
     }
 
-    /* HEADER */
     header {
       background: var(--ink);
       color: var(--white);
@@ -48,7 +47,6 @@
       font-weight: 300;
     }
 
-    /* TOOLBAR */
     .toolbar {
       background: var(--white);
       border-bottom: 1px solid var(--border);
@@ -105,7 +103,6 @@
       background-position: right 12px center;
     }
 
-    /* STATS */
     .stats {
       padding: 1.2rem 2rem;
       font-size: 0.85rem;
@@ -113,7 +110,6 @@
     }
     .stats span { font-weight: 500; color: var(--ink); }
 
-    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -123,7 +119,6 @@
       margin: 0 auto;
     }
 
-    /* BOOK CARD */
     .book-card {
       background: var(--white);
       border-radius: var(--radius);
@@ -190,9 +185,7 @@
       letter-spacing: 0.05em;
     }
 
-    .book-info {
-      padding: 0.9rem;
-    }
+    .book-info { padding: 0.9rem; }
     .book-info h3 {
       font-family: 'Playfair Display', serif;
       font-size: 0.95rem;
@@ -213,10 +206,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .book-actions {
-      display: flex;
-      gap: 0.5rem;
-    }
+    .book-actions { display: flex; gap: 0.5rem; }
     .btn-read, .btn-dl {
       flex: 1;
       display: flex;
@@ -233,18 +223,11 @@
       border: none;
       transition: background 0.2s, color 0.2s;
     }
-    .btn-read {
-      background: var(--accent);
-      color: var(--white);
-    }
+    .btn-read { background: var(--accent); color: var(--white); }
     .btn-read:hover { background: #5c3620; }
-    .btn-dl {
-      background: var(--bg2);
-      color: var(--ink);
-    }
+    .btn-dl { background: var(--bg2); color: var(--ink); }
     .btn-dl:hover { background: var(--accent-light); }
 
-    /* MODAL */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -259,6 +242,7 @@
     .modal-overlay.active { display: flex; }
 
     .modal {
+      position: relative;
       background: var(--white);
       border-radius: 18px;
       max-width: 700px;
@@ -281,6 +265,10 @@
       border-radius: 8px;
       overflow: hidden;
       aspect-ratio: 2/3;
+      background: var(--bg2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .modal-cover img {
       width: 100%;
@@ -288,11 +276,6 @@
       object-fit: cover;
     }
     .modal-cover-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 2.5rem;
     }
     .modal-meta { flex: 1; min-width: 0; }
@@ -363,13 +346,7 @@
     }
     .close-btn:hover { background: var(--accent-light); }
 
-    .modal { position: relative; }
-
-    /* PDF EMBED INSIDE MODAL */
-    .pdf-embed {
-      display: none;
-      padding: 0 1.5rem 1.5rem;
-    }
+    .pdf-embed { display: none; padding: 0 1.5rem 1.5rem; }
     .pdf-embed.active { display: block; }
     .pdf-embed iframe {
       width: 100%;
@@ -379,7 +356,6 @@
       background: var(--bg2);
     }
 
-    /* EMPTY STATE */
     .empty {
       text-align: center;
       padding: 4rem 2rem;
@@ -421,10 +397,8 @@
 </div>
 
 <div class="stats" id="stats"></div>
-
 <div class="grid" id="grid"></div>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal" id="modal">
     <button class="close-btn" id="closeBtn" aria-label="Cerrar">✕</button>
@@ -443,7 +417,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           Leer en Drive
         </a>
-        <a class="btn-lg btn-secondary" id="btnDownload" href="#" download>
+        <a class="btn-lg btn-secondary" id="btnDownload" href="#" target="_blank">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Descargar PDF
         </a>
@@ -460,34 +434,32 @@
 </div>
 
 <footer>
-  Hecho con ❤️ · Espero que puedan leer y viajar mucho
+  Hecho con ❤️ · Los PDFs se sirven desde Google Drive
 </footer>
 
 <script>
-// ─── CONFIGURACIÓN ────────────────────────────────────────────────────────────
-// Cambia esta URL por la URL de tu books.json en GitHub
 const BOOKS_JSON_URL = 'books.json';
 
-// ─── HELPERS DE DRIVE ────────────────────────────────────────────────────────
-function driveViewUrl(id)     { return `https://drive.google.com/file/d/${id}/view`; }
-function driveDownloadUrl(id) { return `https://drive.google.com/uc?export=download&id=${id}`; }
-function drivePreviewUrl(id)  { return `https://drive.google.com/file/d/${id}/preview`; }
+function driveViewUrl(id)     { return 'https://drive.google.com/file/d/' + id + '/view'; }
+function driveDownloadUrl(id) { return 'https://drive.google.com/uc?export=download&id=' + id; }
+function drivePreviewUrl(id)  { return 'https://drive.google.com/file/d/' + id + '/preview'; }
 
-// ─── ESTADO ──────────────────────────────────────────────────────────────────
 let allBooks = [];
 let filtered = [];
 let currentBook = null;
 
-const grid       = document.getElementById('grid');
-const stats      = document.getElementById('stats');
+const grid        = document.getElementById('grid');
+const stats       = document.getElementById('stats');
 const searchInput = document.getElementById('searchInput');
 const genreFilter = document.getElementById('genreFilter');
 const sortSelect  = document.getElementById('sortSelect');
-const overlay    = document.getElementById('modalOverlay');
-const pdfEmbed   = document.getElementById('pdfEmbed');
-const pdfFrame   = document.getElementById('pdfFrame');
+const overlay     = document.getElementById('modalOverlay');
+const pdfEmbed    = document.getElementById('pdfEmbed');
+const pdfFrame    = document.getElementById('pdfFrame');
 
-// ─── CARGA DE DATOS ──────────────────────────────────────────────────────────
+const EMOJIS  = ['📗','📘','📕','📙','📔','📒'];
+const PALETTE = ['#6B4226','#2C4A7C','#1D6B4B','#6B2C4A','#4A4A2C','#4A2C6B'];
+
 async function loadBooks() {
   try {
     const res = await fetch(BOOKS_JSON_URL);
@@ -496,23 +468,22 @@ async function loadBooks() {
     buildGenreFilter();
     applyFilters();
   } catch(e) {
-    grid.innerHTML = `<div class="empty"><p>⚠️ No se pudieron cargar los libros.<br><small>${e.message}</small></p></div>`;
+    grid.innerHTML = '<div class="empty"><p>⚠️ No se pudieron cargar los libros.<br><small>' + e.message + '</small></p></div>';
   }
 }
 
-// ─── GÉNEROS ─────────────────────────────────────────────────────────────────
 function buildGenreFilter() {
   const genres = [...new Set(allBooks.map(b => b.genre).filter(Boolean))].sort();
   genres.forEach(g => {
     const opt = document.createElement('option');
-    opt.value = g; opt.textContent = g;
+    opt.value = g;
+    opt.textContent = g;
     genreFilter.appendChild(opt);
   });
 }
 
-// ─── FILTROS Y ORDEN ─────────────────────────────────────────────────────────
 function applyFilters() {
-  const q = searchInput.value.trim().toLowerCase();
+  const q     = searchInput.value.trim().toLowerCase();
   const genre = genreFilter.value;
   const sort  = sortSelect.value;
 
@@ -528,90 +499,137 @@ function applyFilters() {
 
   filtered.sort((a, b) => {
     if (sort === 'author')    return a.author.localeCompare(b.author);
-    if (sort === 'year-desc') return (b.year||0) - (a.year||0);
-    if (sort === 'year-asc')  return (a.year||0) - (b.year||0);
+    if (sort === 'year-desc') return (b.year || 0) - (a.year || 0);
+    if (sort === 'year-asc')  return (a.year || 0) - (b.year || 0);
     return a.title.localeCompare(b.title);
   });
 
   renderGrid();
-  stats.innerHTML = `Mostrando <span>${filtered.length}</span> de <span>${allBooks.length}</span> libros`;
+  stats.innerHTML = 'Mostrando <span>' + filtered.length + '</span> de <span>' + allBooks.length + '</span> libros';
 }
 
 [searchInput, genreFilter, sortSelect].forEach(el => el.addEventListener('input', applyFilters));
 
-// ─── RENDER DE TARJETAS ───────────────────────────────────────────────────────
-const EMOJIS = ['📗','📘','📕','📙','📔','📒'];
-const PALETTE = ['#6B4226','#2C4A7C','#1D6B4B','#6B2C4A','#4A4A2C','#4A2C6B'];
-
-function coverHTML(book) {
-  if (book.cover) {
-    return `<img src="${book.cover}" alt="Portada de ${book.title}" loading="lazy" onerror="this.parentElement.innerHTML=placeholderHTML('${book.id}','${escapeAttr(book.title)}','${escapeAttr(book.author)}')" />`;
-  }
-  return placeholderInner(book.id, book.title, book.author);
-}
-
 function placeholderInner(id, title, author) {
   const i = (id || 0) % PALETTE.length;
-  return `<div class="cover-placeholder" style="background:${PALETTE[i]}">
-    <div class="emoji">${EMOJIS[i]}</div>
-    <div class="ptitle">${title}</div>
-    <div class="pauthor">${author}</div>
-  </div>`;
+  const div = document.createElement('div');
+  div.className = 'cover-placeholder';
+  div.style.background = PALETTE[i];
+  div.innerHTML =
+    '<div class="emoji">' + EMOJIS[i] + '</div>' +
+    '<div class="ptitle">' + title + '</div>' +
+    '<div class="pauthor">' + author + '</div>';
+  return div;
 }
 
-function placeholderHTML(id, title, author) {
-  return placeholderInner(parseInt(id)||0, title, author);
+// Called when an img fails to load — replaces it with a colored placeholder
+function handleImgError(img, id) {
+  const book = allBooks.find(b => b.id === id);
+  if (!book) return;
+  const wrap = img.parentElement;
+  wrap.innerHTML = '';
+  wrap.appendChild(placeholderInner(book.id, book.title, book.author));
 }
-
-function escapeAttr(s) { return (s||'').replace(/'/g,"\\'"); }
 
 function renderGrid() {
   if (!filtered.length) {
-    grid.innerHTML = `<div class="empty">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-      <p>No se encontraron libros</p>
-    </div>`;
+    grid.innerHTML = '<div class="empty">' +
+      '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">' +
+      '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>' +
+      '<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>' +
+      '<p>No se encontraron libros</p></div>';
     return;
   }
 
-  grid.innerHTML = filtered.map(book => {
-    const hasC = !!book.cover;
-    return `<div class="book-card" onclick="openModal(${book.id})">
-      <div class="cover-wrap">
-        ${hasC
-          ? `<img src="${book.cover}" alt="Portada de ${book.title}" loading="lazy" onerror="this.parentElement.innerHTML=\`${placeholderHTML(book.id, book.title, book.author)}\`" />`
-          : placeholderInner(book.id, book.title, book.author)
-        }
-        ${book.genre ? `<span class="genre-badge">${book.genre}</span>` : ''}
-      </div>
-      <div class="book-info">
-        <h3>${book.title}</h3>
-        <p class="author">${book.author}</p>
-        <div class="book-actions">
-          <a class="btn-read" href="${driveViewUrl(book.driveId)}" target="_blank" onclick="event.stopPropagation()">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            Leer
-          </a>
-          <a class="btn-dl" href="${driveDownloadUrl(book.driveId)}" target="_blank" onclick="event.stopPropagation()">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            PDF
-          </a>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
+  grid.innerHTML = '';
+
+  filtered.forEach(book => {
+    const card = document.createElement('div');
+    card.className = 'book-card';
+    card.addEventListener('click', () => openModal(book.id));
+
+    // Cover wrap
+    const wrap = document.createElement('div');
+    wrap.className = 'cover-wrap';
+
+    if (book.cover) {
+      const img = document.createElement('img');
+      img.src = book.cover;
+      img.alt = 'Portada de ' + book.title;
+      img.loading = 'lazy';
+      img.addEventListener('error', function() { handleImgError(this, book.id); });
+      wrap.appendChild(img);
+    } else {
+      wrap.appendChild(placeholderInner(book.id, book.title, book.author));
+    }
+
+    if (book.genre) {
+      const badge = document.createElement('span');
+      badge.className = 'genre-badge';
+      badge.textContent = book.genre;
+      wrap.appendChild(badge);
+    }
+
+    // Info section
+    const info = document.createElement('div');
+    info.className = 'book-info';
+    info.innerHTML =
+      '<h3>' + book.title + '</h3>' +
+      '<p class="author">' + book.author + '</p>';
+
+    const actions = document.createElement('div');
+    actions.className = 'book-actions';
+
+    const btnRead = document.createElement('a');
+    btnRead.className = 'btn-read';
+    btnRead.href = driveViewUrl(book.driveId);
+    btnRead.target = '_blank';
+    btnRead.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Leer';
+    btnRead.addEventListener('click', e => e.stopPropagation());
+
+    const btnDl = document.createElement('a');
+    btnDl.className = 'btn-dl';
+    btnDl.href = driveDownloadUrl(book.driveId);
+    btnDl.target = '_blank';
+    btnDl.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>PDF';
+    btnDl.addEventListener('click', e => e.stopPropagation());
+
+    actions.appendChild(btnRead);
+    actions.appendChild(btnDl);
+    info.appendChild(actions);
+
+    card.appendChild(wrap);
+    card.appendChild(info);
+    grid.appendChild(card);
+  });
 }
 
-// ─── MODAL ───────────────────────────────────────────────────────────────────
 function openModal(id) {
   currentBook = allBooks.find(b => b.id === id);
   if (!currentBook) return;
 
   const mc = document.getElementById('modalCover');
+  mc.innerHTML = '';
+
   if (currentBook.cover) {
-    mc.innerHTML = `<img src="${currentBook.cover}" alt="Portada" onerror="this.parentElement.innerHTML='<div class=modal-cover-placeholder>${EMOJIS[id%EMOJIS.length]}</div>'" />`;
+    const img = document.createElement('img');
+    img.src = currentBook.cover;
+    img.alt = 'Portada';
+    img.addEventListener('error', function() {
+      mc.innerHTML = '';
+      const ph = document.createElement('div');
+      ph.className = 'modal-cover-placeholder';
+      ph.textContent = EMOJIS[id % EMOJIS.length];
+      mc.appendChild(ph);
+    });
+    mc.appendChild(img);
   } else {
-    mc.innerHTML = `<div class="modal-cover-placeholder" style="background:${PALETTE[id%PALETTE.length]};border-radius:8px">${EMOJIS[id%EMOJIS.length]}</div>`;
+    const ph = document.createElement('div');
+    ph.className = 'modal-cover-placeholder';
+    ph.style.background = PALETTE[id % PALETTE.length];
+    ph.style.borderRadius = '8px';
+    ph.textContent = EMOJIS[id % EMOJIS.length];
+    mc.appendChild(ph);
   }
 
   document.getElementById('modalTitle').textContent  = currentBook.title;
@@ -620,9 +638,24 @@ function openModal(id) {
 
   const badges = document.getElementById('modalBadges');
   badges.innerHTML = '';
-  if (currentBook.genre) badges.innerHTML += `<span class="badge accent">${currentBook.genre}</span>`;
-  if (currentBook.year)  badges.innerHTML += `<span class="badge">${currentBook.year}</span>`;
-  if (currentBook.pages) badges.innerHTML += `<span class="badge">${currentBook.pages} páginas</span>`;
+  if (currentBook.genre) {
+    const b = document.createElement('span');
+    b.className = 'badge accent';
+    b.textContent = currentBook.genre;
+    badges.appendChild(b);
+  }
+  if (currentBook.year) {
+    const b = document.createElement('span');
+    b.className = 'badge';
+    b.textContent = currentBook.year;
+    badges.appendChild(b);
+  }
+  if (currentBook.pages) {
+    const b = document.createElement('span');
+    b.className = 'badge';
+    b.textContent = currentBook.pages + ' páginas';
+    badges.appendChild(b);
+  }
 
   document.getElementById('btnRead').href     = driveViewUrl(currentBook.driveId);
   document.getElementById('btnDownload').href = driveDownloadUrl(currentBook.driveId);
@@ -655,7 +688,6 @@ document.getElementById('closeBtn').addEventListener('click', closeModal);
 overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-// ─── INICIO ───────────────────────────────────────────────────────────────────
 loadBooks();
 </script>
 </body>
