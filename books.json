@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "El nombre del viento",
+    "author": "Patrick Rothfuss",
+    "year": 2007,
+    "cover": "covers/nombre-del-viento.jpg",
+    "driveId": "TU_FILE_ID_AQUI",
+    "color": "#8B4513"
+  },
+  {
+    "id": 2,
+    "title": "Otro libro",
+    "author": "Autor",
+    "year": 2020,
+    "cover": "covers/otro-libro.jpg",
+    "driveId": "OTRO_FILE_ID",
+    "color": "#2C4A7C"
+  }
+]
