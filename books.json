@@ -6,17 +6,19 @@
     "year": 1949,
     "cover": "covers/1984.jpg",
     "pages": 255,
-    "description": "Un oficinista intenta rebelarse contra un gobierno que respira en su nuca 24/7. Léelo antes de que el Gran Hermano decida borrarlo de este disco duro.",
+    "description": "Un oficinista intenta rebelarse contra un gobierno que le respira en la nuca 24/7. ¿Logrará encontrar una falla en el sistema o lo van a terminar reseteando de fábrica?",
     "driveId": "1skCTvSiZgqRsM0LbgCFITyYTxJwCaNF_",
     "color": "#8B4513"
   },
   {
     "id": 2,
-    "title": "Otro libro",
-    "author": "Autor",
-    "year": 2020,
-    "cover": "covers/otro-libro.jpg",
-    "driveId": "OTRO_FILE_ID",
+    "title": "El extranjero",
+    "author": "Albert Camus",
+    "year": 1942,
+    "cover": "covers/el-extranjero.jpg",
+    "pages": 94,
+    "description": "Un hombre desganado termina en el banquillo de los acusados por un incidente que ni él mismo entiende del todo. ¿Le costará la vida su brutal y fría honestidad frente a una sociedad tan dramática?",
+    "driveId": "11nDQrd-jg1yWm3MF-CuLGDtcmQ-3CfU4",
     "color": "#2C4A7C"
   }
 ]
