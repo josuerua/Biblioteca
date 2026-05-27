@@ -20,5 +20,71 @@
     "description": "Un hombre desganado termina en el banquillo de los acusados por un incidente que ni él mismo entiende del todo. ¿Le costará la vida su brutal y fría honestidad frente a una sociedad tan dramática?",
     "driveId": "11nDQrd-jg1yWm3MF-CuLGDtcmQ-3CfU4",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 3,
+    "title": "Apologia de Socrates",
+    "author": "Platon",
+    "year": 393,
+    "cover": "covers/apologia-de-socrates.jpg",
+    "pages": 19,
+    "description": "Un viejo terco se enfrenta a la pena de muerte por el grave delito de pensar demasiado en voz alta frente a sus propios jueces. ¿Saldrá caminando del tribunal o será silenciado?",
+    "driveId": "1DZqXU3kPCu44vg6HqMckDQ4WH863euIz",
+    "color": "#8B4513"
+  },
+  {
+    "id": 4,
+    "title": "Caminar",
+    "author": "Henry Thoreau",
+    "year": 1862,
+    "cover": "covers/caminar.jpg",
+    "pages": 20,
+    "description": "Un tipo harto del ruido y el cemento asegura que la única terapia real es perderse en el monte sin rumbo ni reloj. ¿Encontrará la libertad total o la sociedad lo arrastrará de vuelta al escritorio?",
+    "driveId": "1Le7xYb7bYUHJKJE-NHyEIaBKO50vDX3Z",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 5,
+    "title": "Candido, o el optimismo",
+    "author": "Voltaire",
+    "year": 1759,
+    "cover": "covers/candido.jpg",
+    "pages": 59,
+    "description": "Un muchacho absurdamente optimista es pateado fuera de su burbuja y se come todas las desgracias del planeta para comprobar si la vida es tan perfecta como le enseñaron. ¿Se le quitará la ingenuidad a base de golpes o seguirá sonriendo mientras el mundo arde?",
+    "driveId": "1SpkcK8w4_OcOMzhMw_bscVHGRc0s0StD",
+    "color": "#8B4513"
+  },
+  {
+    "id": 6,
+    "title": "Cartas a Theo",
+    "author": "Vincent Van Gogh",
+    "year": 1914,
+    "cover": "covers/cartas-a-theo.jpg",
+    "pages": 338,
+    "description": "El pase VIP y sin censura a la mente caótica de un pintor que depende de su hermano menor para sobrevivir al día a día. ¿Valdrá la pena tanto sufrimiento por el arte o su cabeza le pasará la factura final?",
+    "driveId": "1ZNJeX6kZYeWsFpyKXSv_9XcAECWxkk0y",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 7,
+    "title": "Cinco secretos de las riquezas",
+    "author": "Craig Hill",
+    "year": 2001,
+    "cover": "covers/cinco-secretos-financieros.jpg",
+    "pages": 151,
+    "description": "Cinco pasos que el autor propone para multiplicar el dinero en vez de solo sumarlo.",
+    "driveId": "11jrkCL8aikA2HHDwYhYgxXcIbeFSFfpC",
+    "color": "#8B4513"
+  },
+  {
+    "id": 8,
+    "title": "Creatividad S.A.",
+    "author": "Ed Catmull",
+    "year": 2014,
+    "cover": "covers/creatividad-sa.jpg",
+    "pages": 250,
+    "description": "Un manual sin anestesia sobre cómo lidiar con el caos y exprimir el talento de un grupo de locos creativos sin matarlos de aburrimiento corporativo.",
+    "driveId": "1wIrrWlfTQ7A7zr2rsWJR0wE0eSGw900C",
+    "color": "#2C4A7C"
   }
 ]
