@@ -75,5 +75,27 @@
     "description": "Un manual sin anestesia sobre cómo lidiar con el caos y exprimir el talento de un grupo de locos creativos sin matarlos de aburrimiento corporativo.",
     "driveId": "1wIrrWlfTQ7A7zr2rsWJR0wE0eSGw900C",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 8,
+    "title": "El cocodrilo",
+    "author": "Fiodor Dostoievski",
+    "year": 1865,
+    "cover": "covers/el-cocodrilo.jpg",
+    "pages": 35,
+    "description": "Un tipo termina en el estomago del cocodrilo de la feria, pero en lugar de entrar en pánico, se acomoda en la panza y empieza a dar discursos porque dice que ahí se piensa mejor. ¿Lograrán sacarlo o armará su nueva vida entre los jugos gástricos?",
+    "driveId": "1gR2KLqkZ3TapF7rI0Y_3okhApj3Lggaa",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 9,
+    "title": "El coronel no tiene quien le escriba",
+    "author": "Gabriel Garcia Marquez",
+    "year": 1961,
+    "cover": "covers/el-coronel-no-tiene-quien-le-escriba.jpg",
+    "pages": 50,
+    "description": "Un exmilitar en la ruina prefiere soportar los reclamos de su esposa enferma antes que vender la última herencia de su hijo: un gallo. ¿Valdrá la pena aferrarse a tanta dignidad o se estrellará con que el orgullo no llena el estómago?",
+    "driveId": "123gntUD4dOCSL7w57CXkC53S-Fp1WE53",
+    "color": "#2C4A7C"
   }
 ]
