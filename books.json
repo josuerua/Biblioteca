@@ -23,17 +23,6 @@
   },
   {
     "id": 3,
-    "title": "Apologia de Socrates",
-    "author": "Platon",
-    "year": 393,
-    "cover": "covers/apologia-de-socrates.jpg",
-    "pages": 19,
-    "description": "Un viejo terco se enfrenta a la pena de muerte por el grave delito de pensar demasiado en voz alta frente a sus propios jueces. ¿Saldrá caminando del tribunal o será silenciado?",
-    "driveId": "1DZqXU3kPCu44vg6HqMckDQ4WH863euIz",
-    "color": "#8B4513"
-  },
-  {
-    "id": 4,
     "title": "Caminar",
     "author": "Henry Thoreau",
     "year": 1862,
@@ -44,7 +33,7 @@
     "color": "#2C4A7C"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Candido, o el optimismo",
     "author": "Voltaire",
     "year": 1759,
@@ -55,7 +44,7 @@
     "color": "#8B4513"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Cartas a Theo",
     "author": "Vincent Van Gogh",
     "year": 1914,
@@ -66,7 +55,7 @@
     "color": "#2C4A7C"
   },
   {
-    "id": 7,
+    "id": 6,
     "title": "Cinco secretos de las riquezas",
     "author": "Craig Hill",
     "year": 2001,
@@ -77,7 +66,7 @@
     "color": "#8B4513"
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Creatividad S.A.",
     "author": "Ed Catmull",
     "year": 2014,
