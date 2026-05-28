@@ -65,7 +65,6 @@
     }
     #passphrase-input::placeholder {
       color: rgba(255,254,249,0.35);
-      letter-spacing: 0.1em;
     }
     #passphrase-input:focus {
       border-color: rgba(255,254,249,0.6);
@@ -87,8 +86,6 @@
     }
     #decrypt-button:hover { background: #5c3620; }
 
-    #passphrase-form.hidden { display: none; }
-
     #instructions {
       color: rgba(255,254,249,0.5);
       font-size: 0.75rem;
@@ -96,14 +93,13 @@
       letter-spacing: 0.03em;
     }
 
-    /* Error message */
-    #password-error {
-      color: #e07070;
-      font-size: 0.82rem;
-      text-align: center;
-      display: none;
+    /* Ocultar el checkbox de "remember me" que inyecta staticrypt */
+    #remember {
+      display: none !important;
     }
-    #password-error.visible { display: block; }
+    label[for="remember"] {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
@@ -112,7 +108,8 @@
   <div class="card">
     <p class="title">Ingresa la contraseña</p>
 
-    <form id="passphrase-form" action="#" method="post" autocomplete="off">
+    <!--staticrypt-html-->
+    <div id="staticrypt-html">
       <div style="display:flex; flex-direction:column; gap:0.9rem; width:100%;">
         <input
           id="passphrase-input"
@@ -121,43 +118,19 @@
           placeholder="••••••••"
           autofocus
         />
-        <p id="password-error">Contraseña incorrecta</p>
-        <button id="decrypt-button" type="submit">Entrar</button>
+        <p id="staticrypt-failed-auth-hint" style="color:#e07070;font-size:0.82rem;text-align:center;display:none;">Contraseña incorrecta</p>
+        <button id="decrypt-button" type="button">Entrar</button>
       </div>
-    </form>
+    </div>
+    <!--/staticrypt-html-->
 
     <p id="instructions">Acceso privado · Biblioteca de Josu</p>
   </div>
 
+  <!--staticrypt-scripts-->
   {{{crypto_tag}}}
   {{{staticrypt_config}}}
   {{{crypto_init}}}
-
-  <script>
-    // Remove any "remember me" functionality
-    var form = document.getElementById('passphrase-form');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var pwd = document.getElementById('passphrase-input').value;
-      var err = document.getElementById('password-error');
-
-      if (staticrypt_config && typeof decrypt === 'function') {
-        decrypt(pwd).then(function(decrypted) {
-          if (decrypted) {
-            document.open();
-            document.write(decrypted);
-            document.close();
-          } else {
-            err.classList.add('visible');
-            document.getElementById('passphrase-input').value = '';
-          }
-        });
-      }
-    });
-
-    document.getElementById('passphrase-input').addEventListener('input', function() {
-      document.getElementById('password-error').classList.remove('visible');
-    });
-  </script>
+  <!--/staticrypt-scripts-->
 </body>
 </html>
