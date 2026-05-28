@@ -130,5 +130,39 @@
     "description": "Una chica empieza a recibir cartas anónimas en su buzón y termina metida en un curso clandestino de filosofía con un maestro fantasma que la hace dudar hasta de su propia vida es real.",
     "driveId": "1Kw1XjM1wXeNFtu_KPmq1PEKmoHOuyZ8t",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 13,
+    "title": "El viejo y el mar",
+    "author": "Ernest Hemingway",
+    "year": 1952,
+    "cover": "covers/el-viejo-y-el-mar.jpg",
+    "pages": 61,
+    "description": "Un viejo pescador desatanda una guerra a muerte con un pez en mar abierto en donde ninguno quiere ceder. ¿Logrará arrastrar su trofeo hasta la orilla o la naturaleza le arrancará hasta el último gramo de orgullo?",
+    "driveId": "17yps2N-o5mneeDGkteX3ivm_CTZmlY0q",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 14,
+    "title": "En Bolivia no hay racismo, indios de mierda",
+    "author": "Carlos Macusaya",
+    "year": 2020,
+    "cover": "covers/en-bolivia-no-hay-racismo.jpg",
+    "pages": 137,
+    "description": "El autor destroza el mito de que todos somos iguales, exponiendo la hipocresía de una sociedad que niega discriminar mientras humilla a diario. ¿Te aguantarás esta bofetada de realidad o seguirás mirando para otro lado?",
+    "driveId": "1TrtnqP05vAL6LZRS8kz_gBDY0ynOk7OR",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 15,
+    "title": "Ensayo sobre la ceguera",
+    "author": "Jose Saramago",
+    "year": 1995,
+    "cover": "covers/ensayo-sobre-la-ceguera.jpg",
+    "pages": 244,
+    "description": "Una epidemia inexplicable deja ciega a toda la ciudad y la sociedad civilizada se desploma en un par de días. Solo una mujer conserva la vista en este infierno. ¿Logrará salvar a los suyos o enloquecerá viendo nuestra verdadera cara salvaje?",
+    "driveId": "1qL0Yyv7j_yKzEmusWejGfNDHxrThF7KW",
+    "color": "#2C4A7C"
   }
+  
 ]
