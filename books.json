@@ -97,5 +97,38 @@
     "description": "Un exmilitar en la ruina prefiere soportar los reclamos de su esposa enferma antes que vender la última herencia de su hijo: un gallo. ¿Valdrá la pena aferrarse a tanta dignidad o se estrellará con que el orgullo no llena el estómago?",
     "driveId": "123gntUD4dOCSL7w57CXkC53S-Fp1WE53",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 10,
+    "title": "Cadaver Exquisito",
+    "author": "Agustina Bazterrica",
+    "year": 2017,
+    "cover": "covers/cadaver-exquisito.jpg",
+    "pages": 126,
+    "description": "El mundo se quedó sin animales comestibles y la nueva normalidad es criar humanos para el asado. Un tipo que trabaja en el negocio de la *carne especial* intenta sobrevivir a su rutina diaria sin volverse loco.",
+    "driveId": "1Z2GkJ8uo-FJewtT9UtPcyT0_uZlm1hc_",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 11,
+    "title": "El Leviatan",
+    "author": "Joseph Roth",
+    "year": 1940,
+    "cover": "covers/el-leviatan.jpg",
+    "pages": 31,
+    "description": "Un vendedor de corales vive obsesionado con el océano, hasta que un forastero le enseña el sucio truco de vender plástico barato como si fuera joyería fina. ¿Caerá en la tentación del dinero fácil o se mantendrá fiel a sus principios en un mundo que premia la estafa?",
+    "driveId": "1dluEWOwj5brsD3L-p8Y9Uk-RCv7ohmwl",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 12,
+    "title": "El mundo de Sofia",
+    "author": "Jostein Gaarder",
+    "year": 1991,
+    "cover": "covers/el-mundo-de-sofia.jpg",
+    "pages": 689,
+    "description": "Una chica empieza a recibir cartas anónimas en su buzón y termina metida en un curso clandestino de filosofía con un maestro fantasma que la hace dudar hasta de su propia vida es real.",
+    "driveId": "1DSNqaDrT9q6DPX9zRDEzAvG1-eLMJMEM",
+    "color": "#2C4A7C"
   }
 ]
