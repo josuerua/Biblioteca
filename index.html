@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Biblioteca Virtual</title>
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f0e0c;
+      font-family: 'Georgia', serif;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .title {
+      color: rgba(255,254,249,0.85);
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    #pwd {
+      width: 100%;
+      padding: 0.85rem 1.2rem;
+      border: 1px solid rgba(255,254,249,0.2);
+      border-radius: 50px;
+      background: rgba(255,254,249,0.06);
+      color: #fffef9;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    #pwd::placeholder { color: rgba(255,254,249,0.3); }
+    #pwd:focus {
+      border-color: rgba(255,254,249,0.5);
+      background: rgba(255,254,249,0.1);
+    }
+
+    #btn {
+      width: 100%;
+      padding: 0.85rem;
+      border: none;
+      border-radius: 50px;
+      background: #7C4B2A;
+      color: #fffef9;
+      font-family: 'Georgia', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #btn:hover { background: #5c3620; }
+
+    #error {
+      color: #e07070;
+      font-size: 0.8rem;
+      text-align: center;
+      min-height: 1.2em;
+      letter-spacing: 0.03em;
+    }
+
+    .footer {
+      color: rgba(255,254,249,0.3);
+      font-size: 0.7rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="title">Ingresa la contraseña</p>
+    <input id="pwd" type="password" placeholder="••••••••" autofocus />
+    <p id="error"></p>
+    <button id="btn">Entrar</button>
+    <p class="footer">Acceso privado · Biblioteca de Josu</p>
+  </div>
+
+  <script>
+    function enter() {
+      var val = document.getElementById('pwd').value.trim().toLowerCase();
+      if (val === 'tolstoi') {
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('error').textContent = 'Contraseña incorrecta';
+        document.getElementById('pwd').value = '';
+        document.getElementById('pwd').focus();
+      }
+    }
+
+    document.getElementById('btn').addEventListener('click', enter);
+    document.getElementById('pwd').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') enter();
+    });
+    document.getElementById('pwd').addEventListener('input', function() {
+      document.getElementById('error').textContent = '';
+    });
+  </script>
+</body>
+</html>
