@@ -196,6 +196,17 @@
     "description": "Un joven estudiante de buena familia vuelve a su pueblo y pierde la cabeza por una chola de ojos hipnóticos, desatando el escándalo del pueblo. ¿Mandará su futuro al diablo por amor o cederá a la presión de la clase alta?",
     "driveId": "1-_xx6wBoPPr9DsCUiq8qMsUJNRtJyOlq",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 19,
+    "title": "Apología de Sócrates",
+    "author": "Platón",
+    "year": 399ac,
+    "cover": "covers/socrates.jpg",
+    "pages": 37,
+    "description": "Mandan a juicio al viejo terco de la ciudad por el terrible delito de hacer pensar a la gente. Sabiendo que el tribunal está amañado, decide burlarse del jurado entero.",
+    "driveId": "1qW130gHkeF9FC4VD0N9EUc949JSNvML8",
+    "color": "#2C4A7C"
   }
   
 ]
