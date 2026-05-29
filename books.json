@@ -163,6 +163,39 @@
     "description": "Una epidemia inexplicable deja ciega a toda la ciudad y la sociedad civilizada se desploma en un par de días. Solo una mujer conserva la vista en este infierno. ¿Logrará salvar a los suyos o enloquecerá viendo nuestra verdadera cara salvaje?",
     "driveId": "1qL0Yyv7j_yKzEmusWejGfNDHxrThF7KW",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 16,
+    "title": "Cuanta tierra necesita un hombre",
+    "author": "Lev Tolstoi",
+    "year": 1886,
+    "cover": "covers/tierra-hombre.jpg",
+    "pages": 50,
+    "description": "Un campesino ambicioso intenta adueñarse de toda la tierra que logre recorrer a pie en un solo día, apostando su vida contra el sol. ¿Sabrá conformarse a tiempo o su propia codicia podrá más que él.",
+    "driveId": "1Ki31EawHGbbPZlnmpzf2lDKJmrnbutjW",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 17,
+    "title": "Historia del mundo contada para escépticos",
+    "author": "Juan Eslava Galán",
+    "year": 2012,
+    "cover": "covers/historia-mundo.jpg",
+    "pages": 320,
+    "description": "Un repaso sarcástico a los grandes hitos de la humanidad para confirmarte que la historia no la escribieron los valientes, sino los más vivos, suertudos y manipuladores. ¿Soportarás ver a tus ídolos históricos caerse del pedestal o prefieres seguir creyendo en mitos?",
+    "driveId": "1-0lXA9Anf1d0oX3hkz5bWhULzoiau8nK",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 18,
+    "title": "La Chaskañawi",
+    "author": "Carlos Medinaceli",
+    "year": 1924,
+    "cover": "covers/la-chaskanawi.jpg",
+    "pages": 184,
+    "description": "Un joven estudiante de buena familia vuelve a su pueblo y pierde la cabeza por una chola de ojos hipnóticos, desatando el escándalo del pueblo. ¿Mandará su futuro al diablo por amor o cederá a la presión de la clase alta?",
+    "driveId": "1-_xx6wBoPPr9DsCUiq8qMsUJNRtJyOlq",
+    "color": "#2C4A7C"
   }
   
 ]
