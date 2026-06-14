@@ -350,6 +350,28 @@
     "description": "Un recorrido súper divertido que destruye el mito de que las inteligencias artificiales están a punto de esclavizar a la humanidad. La realidad es que la mayoría apenas puede resolver un problema sin hacer el ridículo.",
     "driveId": "1VNCoVJnF94m_BxBrrhrjapZuzKW2aFoG",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 33,
+    "title": "The apology of Socrates",
+    "author": "Plato",
+    "year": -389,
+    "cover": "covers/socrates.jpg",
+    "pages": 19,
+    "description": "Mandan a juicio al pensador más terco de la ciudad por el terrible delito de hacer pensar a la gente. Sabiendo que el tribunal está amañado, decide burlarse del jurado entero.",
+    "driveId": "1G6VNa7nU7vxo7m0uEJa3s0u9hKZblBPC",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 34,
+    "title": "Cuentos completos",
+    "author": "Anton Chejov",
+    "year": 1885,
+    "cover": "covers/chejov.jpg",
+    "pages": 1008,
+    "description": "Una inmersión brutal en las pequeñas tragedias de la gente común. Una mirada en el espejo en el espejo de sus fascinantes vidas cotidianas",
+    "driveId": "1QMAkdzb0GaCVyuAXxGRkj1XvkF7i99YB",
+    "color": "#2C4A7C"
   }
   
 ]
