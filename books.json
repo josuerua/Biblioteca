@@ -56,13 +56,13 @@
   },
   {
     "id": 6,
-    "title": "Cinco secretos de las riquezas",
-    "author": "Craig Hill",
-    "year": 2001,
-    "cover": "covers/cinco-secretos-financieros.jpg",
-    "pages": 151,
-    "description": "Cinco pasos que el autor propone para multiplicar el dinero en vez de solo sumarlo.",
-    "driveId": "11jrkCL8aikA2HHDwYhYgxXcIbeFSFfpC",
+    "title": "El lobo estepario",
+    "author": "Hermann Hesse",
+    "year": 1927,
+    "cover": "covers/estepario.jpg",
+    "pages": 156,
+    "description": "Atrapado en una profunda crisis existencial, un hombre solitario choca con un submundo bohemio y un misterioso Teatro Mágico que desafía todo lo que cree sobre sí mismo.",
+    "driveId": "1_6iOz1q-P54wEyb7iZ4rHZoxRsbJv-SJ",
     "color": "#8B4513"
   },
   {
@@ -371,6 +371,28 @@
     "pages": 1008,
     "description": "Una inmersión brutal en las pequeñas tragedias de la gente común. Una mirada en el espejo de sus fascinantes vidas cotidianas",
     "driveId": "1QMAkdzb0GaCVyuAXxGRkj1XvkF7i99YB",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 35,
+    "title": "Los recuerdos del porvenir",
+    "author": "Elena Garro",
+    "year": 1963,
+    "cover": "covers/porvenir.jpg",
+    "pages": 204,
+    "description": "Un pueblo entero que cuenta su propia historia queda atrapado bajo el yugo de un militar despiadado y su enfermiza obsesión amorosa. Mientras la violencia asfixia las calles, el tiempo y la memoria comienzan a jugarles trucos crueles.",
+    "driveId": "1JmlutXiEXsWeQwgKVX3V4IFyWGn7-KnE",
+    "color": "#2C4A7C"
+  },
+  {
+    "id": 36,
+    "title": "La tregua",
+    "author": "Mario Benedetti",
+    "year": 1960,
+    "cover": "covers/tregua.jpg",
+    "pages": 158,
+    "description": "Un hombre consumido por años de oficina y monotonía encuentra un refugio cuando una mujer mucho más joven ilumina sus días. De repente, su deprimente camino hacia la vejez se llena de color.",
+    "driveId": "1aIPV-muU1BpFLcw6O9GVQc7QOPzFCfLw",
     "color": "#2C4A7C"
   }
   
