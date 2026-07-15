@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Biblioteca Virtual</title>
+  <title>Mi Biblioteca Virtual</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -122,20 +122,20 @@
 <body>
 
 <div class="banner">
-  <img class="banner-img" src="portada.jpg" alt="Banner" />
+  <img class="banner-img" src="covers/portada.jpg" alt="Banner" />
   <div class="banner-overlay"></div>
   <div class="banner-content">
-    <h1>La Biblioteca Virtual</h1>
-    <p>Creado por Josu Rua</p>
+    <h1>Mi Biblioteca Virtual</h1>
+    <p>Colección personal de libros de Josu</p>
   </div>
 </div>
 
 <div class="profile-section">
   <div class="profile-avatar">
-    <img src="perfil.jpg" alt="Foto de perfil" />
+    <img src="covers/perfil.jpg" alt="Foto de perfil" />
   </div>
   <div class="profile-text">
-    <p>Escríbeme para sumar tu libro favorito a la colección. Hagamos una biblioteca de calidad en lugar de cantidad y viajemos a través de los libros!</p>
+    <p>Como todo esto no puede quedarse solo en mí, les comparto aquí mis libros favoritos para poder disfrutar juntos de la maravilla de las letras y las historias.</p>
   </div>
 </div>
 
@@ -171,6 +171,7 @@
       <div class="modal-meta">
         <h2 id="modalTitle"></h2>
         <p class="m-author" id="modalAuthor"></p>
+        <p id="modalContributor" style="font-size:0.75rem;color:var(--accent);margin-bottom:0.5rem;display:none;"></p>
         <div class="modal-badges" id="modalBadges"></div>
       </div>
     </div>
@@ -288,6 +289,9 @@ function openModal(id) {
   document.getElementById('modalTitle').textContent=currentBook.title;
   document.getElementById('modalAuthor').textContent=currentBook.author;
   document.getElementById('modalDesc').textContent=currentBook.description||'Sin descripción disponible.';
+  var contrib=document.getElementById('modalContributor');
+  if(currentBook.contributor){ contrib.textContent='Aportado por '+currentBook.contributor; contrib.style.display='block'; }
+  else { contrib.style.display='none'; }
   var badges=document.getElementById('modalBadges'); badges.innerHTML='';
   if (currentBook.genre){var b1=document.createElement('span');b1.className='badge accent';b1.textContent=currentBook.genre;badges.appendChild(b1);}
   if (currentBook.year){var b2=document.createElement('span');b2.className='badge';b2.textContent=currentBook.year;badges.appendChild(b2);}
