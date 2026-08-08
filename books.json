@@ -454,6 +454,17 @@
     "description": "JazAriza -> ¿Qué ocurre cuando un pueblo pierde el miedo? En Fuente Ovejuna, la valentía y la unión desafían el abuso de poder, dando origen a una historia inolvidable sobre justicia, dignidad y resistencia.",
     "driveId": "1ny_AZLtymAxS5gcmJYgUb2JyH6HG8lzw",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 42,
+    "title": "El alienista",
+    "author": "Machado de Assis",
+    "year": 1881,
+    "cover": "covers/alienista.jpg",
+    "pages": 48,
+    "description": "El psiquiatra más brillante de la región desata el caos al intentar catalogar cada defecto humano como una patología mental digna de encierro. ¿Quién es más peligroso: un pueblo lleno de supuestos locos o un doctor con poder absoluto sobre la verdad?",
+    "driveId": "1x9R_bjMRtpjW0esmd5lnTgyRW_SRR5yT",
+    "color": "#2C4A7C"
   }
   
 ]
