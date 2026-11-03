@@ -476,7 +476,17 @@
     "description": "Generación tras generación, los miembros de la familia repiten los mismos errores como si el tiempo fuera un círculo. ¿Podrán romper la maldición que los persigue o el destino de Macondo ya está escrito?",
     "driveId": "1tVVFOQebaAWcUfMm5sVg0YgWRTgww-yZ",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 44,
+    "title": "Niebla (Nivola)",
+    "author": "Miguel de Unamuno",
+    "year": 1914,
+    "cover": "covers/niebla.jpg",
+    "pages": 174,
+    "description": "Lo que empieza como la típica historia de un hombre adinerado persiguiendo a una mujer que lo rechaza, se convierte en un laberinto existencial que rompe las reglas de la realidad.",
+    "driveId": "1O1iY69srN65sRi00NJIJNWqMPAC6oDHf",
+    "color": "#2C4A7C"
   }
-  
-  
+   
 ]
