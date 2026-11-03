@@ -465,6 +465,18 @@
     "description": "El psiquiatra más brillante de la región desata el caos al intentar catalogar cada defecto humano como una patología mental digna de encierro. ¿Quién es más peligroso: un pueblo lleno de supuestos locos o un doctor con poder absoluto sobre la verdad?",
     "driveId": "1x9R_bjMRtpjW0esmd5lnTgyRW_SRR5yT",
     "color": "#2C4A7C"
+  },
+  {
+    "id": 43,
+    "title": "Cien años de soledad",
+    "author": "Gabriel Garcia Marquez",
+    "year": 1967,
+    "cover": "covers/cien.jpg",
+    "pages": 273,
+    "description": "Generación tras generación, los miembros de la familia repiten los mismos errores como si el tiempo fuera un círculo. ¿Podrán romper la maldición que los persigue o el destino de Macondo ya está escrito?",
+    "driveId": "1tVVFOQebaAWcUfMm5sVg0YgWRTgww-yZ",
+    "color": "#2C4A7C"
   }
+  
   
 ]
